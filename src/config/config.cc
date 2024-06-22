@@ -19,6 +19,7 @@ int Config::Load(const INIReader& reader, Config& config) {
   common.pin = reader.GetInteger("common", "pin", -1);
   common.rule_count = reader.GetInteger("common", "rule_count", -1);
   common.pwm_cycle_ns = reader.GetInteger("common", "pwm_cycle_ns", -1);
+  common.monitor_log_path = reader.Get("common", "monitor_log_path", "");
 
   auto& rules = config.rules;
   rules.clear();
