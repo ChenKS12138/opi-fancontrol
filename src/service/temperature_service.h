@@ -13,7 +13,7 @@ namespace service {
 
 class TemperatureService {
  public:
-  TemperatureService(const config::Config& config, uint32_t& temperature)
+  TemperatureService(const config::Config& config, int32_t& temperature)
       : config_(config), temperature_(temperature) {}
   void Run();
 
@@ -21,7 +21,7 @@ class TemperatureService {
   void UpdateTemperature();
 
   const config::Config& config_;
-  uint32_t& temperature_;
+  int32_t& temperature_;
 };
 
 }  // namespace service

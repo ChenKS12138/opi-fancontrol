@@ -28,7 +28,7 @@ class Task {
 
  private:
   config::Config cfg_;
-  uint32_t temperature_;
+  int32_t temperature_;
   service::PwmService pwm_service_;
   service::TemperatureService temperature_service_;
   service::MonitorService monitor_service_;

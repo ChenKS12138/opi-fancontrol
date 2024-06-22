@@ -7,7 +7,7 @@ namespace service {
 class MonitorService {
  public:
   MonitorService(const config::Config& config, const PwmService& pwm_service,
-                 const uint32_t& temperature)
+                 const int32_t& temperature)
       : config_(config), pwm_service_(pwm_service), temperature_(temperature) {}
 
   void Run();
@@ -17,6 +17,6 @@ class MonitorService {
 
   const config::Config& config_;
   const PwmService& pwm_service_;
-  const uint32_t& temperature_;
+  const int32_t& temperature_;
 };
 }  // namespace service

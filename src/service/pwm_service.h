@@ -6,7 +6,7 @@
 namespace service {
 class PwmService {
  public:
-  PwmService(const config::Config& config, uint32_t& temperature)
+  PwmService(const config::Config& config, int32_t& temperature)
       : config_(config),
         temperature_(temperature),
         matched_rule_(nullptr),
@@ -35,7 +35,7 @@ class PwmService {
 
  private:
   const config::Config& config_;
-  uint32_t& temperature_;
+  int32_t& temperature_;
   const config::Config::Rule* matched_rule_;
 
   bool is_stop_;
