@@ -16,7 +16,7 @@ struct Config {
 
     int32_t pin;
     int32_t rule_count;
-    uint64_t pwm_duration_ns;
+    uint64_t pwm_cycle_ns;
   };
 
   struct Rule {

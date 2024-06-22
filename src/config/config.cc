@@ -4,7 +4,7 @@ namespace config {
 std::string Config::Common::ShortDebugString() const {
   std::stringstream ss;
   ss << "{ pin: " << pin << ", rule_count: " << rule_count
-     << ", pwm_duration_ns: " << pwm_duration_ns << " }";
+     << ", pwm_cycle_ns: " << pwm_cycle_ns << " }";
   return ss.str();
 }
 
@@ -18,7 +18,7 @@ int Config::Load(const INIReader& reader, Config& config) {
   auto& common = config.common;
   common.pin = reader.GetInteger("common", "pin", -1);
   common.rule_count = reader.GetInteger("common", "rule_count", -1);
-  common.pwm_duration_ns = reader.GetInteger("common", "pwm_duration_ns", -1);
+  common.pwm_cycle_ns = reader.GetInteger("common", "pwm_cycle_ns", -1);
 
   auto& rules = config.rules;
   rules.clear();

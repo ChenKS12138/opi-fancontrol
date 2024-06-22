@@ -25,7 +25,7 @@ void PwmService::DoValue1Duration(const config::Config::Rule* rule) {
 
   static TimeSpec ts;
   ts.tv_sec = 0;
-  ts.tv_nsec = config_.common.pwm_duration_ns / 100 *
+  ts.tv_nsec = config_.common.pwm_cycle_ns / 100 *
                (rule == nullptr ? 0 : rule->ratio);
   TimeSpecSleep(ts);
 }
@@ -35,7 +35,7 @@ void PwmService::DoValue0Duration(const config::Config::Rule* rule) {
 
   static TimeSpec ts;
   ts.tv_sec = 0;
-  ts.tv_nsec = config_.common.pwm_duration_ns / 100 *
+  ts.tv_nsec = config_.common.pwm_cycle_ns / 100 *
                (100 - (rule == nullptr ? 0 : rule->ratio));
   TimeSpecSleep(ts);
 }
