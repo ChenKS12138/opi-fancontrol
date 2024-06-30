@@ -2,6 +2,10 @@
 
 opi-fancontrol
 
+## READEME in other languages
+
+[简体中文](https://github.com/ChenKS12138/opi-fancontrol/blob/main/README.zh-cn.md)
+
 ## What is it
 
 Utilize software pwm to control fan on your Orange Pi. Having tested on OrangePi 3 LTS, it works well.
